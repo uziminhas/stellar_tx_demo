@@ -8,7 +8,7 @@ Install GnuPG on the command line to decrypt GPG private keys:
 brew install gnupg
 ``
 
-## Decrypting GPG private key
+## Decrypt GPG private key to generate secret key of a source account
 
 Execute in terminal inside a folder which contains the following files: private-key.gpg, decryption-password.txt
 
