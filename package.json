@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/uziminhas/stellar_tx_demo#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "stellar-sdk": "^1.0.5"
   }
 }
