@@ -19,7 +19,6 @@ gpg --output doc --decrypt private-key.gpg
 Enter the passphrase from "decryption-password.txt" when prompted:
 
 <img src="https://github.com/uziminhas/stellar_tx_demo/blob/master/enter_passphrase.png" width="500">
-
 The output of the prior command is a doc.txt file which contains the secret key of a funded account (i.e. source account).
 
 ## Getting started / running the application
