@@ -48,4 +48,4 @@ Stellar.Network.useTestNetwork();
 		console.log('An error has occured:');
 		console.log(e);
 	}
-})()
+})().catch( e => { console.error(e) } );
