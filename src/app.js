@@ -20,3 +20,32 @@ Stellar.Network.useTestNetwork();
 // let accountA = null
 // let accountB = null
 
+(async function main() {
+	// Retrieve the account object in our application
+	const account = await server.loadAccount(sourcePublicKey);
+	// Use base transaction fee
+	const fee = await server.fetchBaseFee();
+	// Create a transaction
+	const transaction = new Stellar.TransactionBuilder(account, {fee})
+		.addOperation(Stellar.Operation.payment({
+			destination: receiverPublicKey,
+			asset: Stellar.Asset.native(),
+			amount: '150.12345',
+		}))
+		.setTimeout(30)
+		.build();
+	// Sign transaction with source account's secret key
+	transaction.sign(sourceKeyPair);
+
+	console.log(transaction.toEnvelope().toXDR('base64'));
+
+	try {
+		const txResult = await server.submitTransaction(transaction);
+		console.log(JSON.stringify(txResult, null, 2));
+		console.log('\Success! View the transaction at: ');
+		console.log(txResult._links.transaction.href);
+	} catch (e) {
+		console.log('An error has occured:');
+		console.log(e);
+	}
+})()
