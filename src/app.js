@@ -20,6 +20,24 @@ Stellar.Network.useTestNetwork();
 // let accountA = null
 // let accountB = null
 
+/*
+server.transactions()
+	.forAccount(receiverPublicKey)
+	.call()
+	.then(function (page) {
+		console.log('Page 1: ');
+		console.log(page.records);
+		return page.next();
+	})
+	.then(function (page) {
+		console.log('Page 2: ');
+		console.log(page.records);
+	})
+	.catch(function (err) {
+		console.log(err);
+	});
+*/
+
 (async function main() {
 	// Retrieve the account object in our application
 	const account = await server.loadAccount(sourcePublicKey);
@@ -42,8 +60,9 @@ Stellar.Network.useTestNetwork();
 	try {
 		const txResult = await server.submitTransaction(transaction);
 		console.log(JSON.stringify(txResult, null, 2));
-		console.log('\Success! View the transaction at: ');
-		console.log(txResult._links.transaction.href);
+		console.log('\Transaction successful! View the transaction on the Stellar testnet explorer: ');
+		//console.log(txResult._links.transaction.href);
+		console.log('https://stellar.expert/explorer/testnet/tx/' + txResult.hash);
 	} catch (e) {
 		console.log('An error has occured:');
 		console.log(e);
