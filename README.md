@@ -34,7 +34,6 @@ $ node app.js
 ``
 
 The terminal outputs the option to transfer TXLM.
-<img src="https://github.com/uziminhas/stellar_tx_demo/blob/master/command_line.png
-" width="500">
+<img src="https://github.com/uziminhas/stellar_tx_demo/blob/master/command_line.png" width="500">
 
 Note: Remaining balance in source account (after transfer of 8.5 TXLM) is 1.5 TXLM. Enter a positive number less than 1.5 TXLM to test additional transfers.
