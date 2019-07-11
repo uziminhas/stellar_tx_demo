@@ -43,5 +43,11 @@ https://stellar.expert/explorer/testnet/tx/94ed923eddfb58bc5c46a0ea9885aa9100975
 
 <img src="https://github.com/uziminhas/stellar_tx_demo/blob/master/successful_transaction.png" width="500">
 
+4) The balance of the source account can be viewed at:
 
-Note: Remaining balance in source account (after transfer of 8.5 TXLM) is 1.5 TXLM. Enter a positive number less than 1.5 TXLM to test additional transfers.
+https://stellar.expert/explorer/testnet/account/GDRVHOEUZ3RJUEA6UUVYCTYDDTRMGEC3OFBDDSMMYHWO5TI6ES5T6BZ7
+
+<img src="https://github.com/uziminhas/stellar_tx_demo/blob/master/source_account.png" width="500">
+
+
+5) Note: Remaining balance in source account (after transfer of 8.5 TXLM) is 1.5 TXLM. Enter a positive number less than 1.5 TXLM to test additional transfers.
