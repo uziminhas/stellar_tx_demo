@@ -9,6 +9,7 @@ const sourcePublicKey = sourceKeyPair.publicKey();
 
 // Receiver account - must be created via funding
 const receiverPublicKey = 'GDH6IJZ7QE6Q4XLZZGUISFSZQ2ZQXL4VJ3NBKOCK2J2CDDISZNES4UZO';
+let memo = Stellar.Memo.id('15');
 
 // Use the Stellar testnet
 const server = new Stellar.Server('https://horizon-testnet.stellar.org');
@@ -23,7 +24,7 @@ const rl = readline.createInterface({
 // Accept user input from command line
 rl.question('Please input amount of TXLM to transfer: ', (answer) => {
 	amount = answer;
-	console.log(`Initiating transfer of ${answer}` + ' TLM...');
+	console.log(`Initiating transfer of ${answer}` + ' TXLM...');
 
 	(async function transfer() {
 
@@ -31,10 +32,13 @@ rl.question('Please input amount of TXLM to transfer: ', (answer) => {
 	const account = await server.loadAccount(sourcePublicKey);
 
 	// Use base transaction fee
-	const fee = await server.fetchBaseFee();
+	const baseFee = await server.fetchBaseFee();
 
 	// Create a transaction
-	const transaction = new Stellar.TransactionBuilder(account, {fee})
+	const transaction = new Stellar.TransactionBuilder(account, {
+		fee: baseFee,
+		memo: memo
+	})
 		.addOperation(Stellar.Operation.payment({
 			destination: receiverPublicKey,
 			asset: Stellar.Asset.native(),
