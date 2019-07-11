@@ -35,19 +35,19 @@ $ node app.js
 
 2) The terminal outputs the option to transfer TXLM.
 
-<img src="https://github.com/uziminhas/stellar_tx_demo/blob/master/command_line.png" width="500">
+<img src="https://github.com/uziminhas/stellar_tx_demo/blob/master/command_line.png" width="750">
 
 3) The successful transaction can be viewed on the Stellar testnet explorer at:
 
 https://stellar.expert/explorer/testnet/tx/94ed923eddfb58bc5c46a0ea9885aa91009756b5a27d3eadfd88e01380d9b710
 
-<img src="https://github.com/uziminhas/stellar_tx_demo/blob/master/successful_transaction.png" width="500">
+<img src="https://github.com/uziminhas/stellar_tx_demo/blob/master/successful_transaction.png" width="750">
 
 4) The balance of the source account can be viewed at:
 
 https://stellar.expert/explorer/testnet/account/GDRVHOEUZ3RJUEA6UUVYCTYDDTRMGEC3OFBDDSMMYHWO5TI6ES5T6BZ7
 
-<img src="https://github.com/uziminhas/stellar_tx_demo/blob/master/source_account.png" width="500">
+<img src="https://github.com/uziminhas/stellar_tx_demo/blob/master/source_account.png" width="750">
 
 
 5) Note: Remaining balance in source account (after transfer of 8.5 TXLM) is 1.5 TXLM. Enter a positive number less than 1.5 TXLM to test additional transfers.
