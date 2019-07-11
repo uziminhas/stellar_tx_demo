@@ -3,12 +3,12 @@ const readline = require('readline');
 let amount;
 
 // Source account - funded via Friendbot
-const sourceSecretKey = 'SAZH2SUUWDWKRJKBD3CUXP54WF4KTDYS6SGQGW2JRPHZRFEZT7IHJ5DD';
+const sourceSecretKey = 'SCNEG4I37ZHR7WM7O24DYLAAEJGZASDXMKC7ARXOD5HL6FJTTUSPDG2E'; // decrypted using GPG
 const sourceKeyPair = Stellar.Keypair.fromSecret(sourceSecretKey);
 const sourcePublicKey = sourceKeyPair.publicKey();
 
 // Receiver account - must be created via funding
-const receiverPublicKey = 'GDH6IJZ7QE6Q4XLZZGUISFSZQ2ZQXL4VJ3NBKOCK2J2CDDISZNES4UZO';
+const receiverPublicKey = 'GCFW3WDOYTJSKXDUXNV6QVRUP4WF7GAAOBZ3FI37K42OJW65VYSONKG6'; // provided by client
 let memo = Stellar.Memo.id('15');
 
 // Use the Stellar testnet
